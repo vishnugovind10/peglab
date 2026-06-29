@@ -1,0 +1,14 @@
+{
+  "label": "MakerDAO-style",
+  "collateral_model": "overcollateralized",
+  "config": {
+    "reserve_ratio": 1.65,
+    "collateral_type": "mixed",
+    "mint_cap_per_step": 3.0,
+    "redemption_rate_limit": 7.5,
+    "oracle_type": "twap_sim",
+    "oracle_delay_steps": 3,
+    "liquidation_threshold": 1.24,
+    "fee_bps": 10
+  }
+}

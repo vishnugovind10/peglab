@@ -1,0 +1,14 @@
+{
+  "label": "USDC-style",
+  "collateral_model": "fiat_backed",
+  "config": {
+    "reserve_ratio": 1.0,
+    "collateral_type": "fiat",
+    "mint_cap_per_step": 4.0,
+    "redemption_rate_limit": 9.0,
+    "oracle_type": "internal_sim",
+    "oracle_delay_steps": 0,
+    "liquidation_threshold": 1.0,
+    "fee_bps": 5
+  }
+}
