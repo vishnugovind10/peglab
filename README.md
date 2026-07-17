@@ -1,3 +1,9 @@
+> ### 📖 Theoretical Foundation & Deep-Dive
+>
+> This repository is the reference implementation of the thesis developed in
+> **[Building PegLab: An Open-Source Engineering Workbench for Stablecoin Stress Testing](https://blog.blockmagnates.com/building-peglab-an-open-source-engineering-workbench-for-stablecoin-stress-testing-6ec821ce8123)**
+> by [Vishnu Govind](https://medium.com/@vishnugovind10) — why every stablecoin team eventually needs to stress-test collateral models, redemption limits, and oracle behavior before deploying real collateral against them.
+
 # peglab
 
 > **Stable-Asset Stress-Testing Lab**: Design a stablecoin's collateral mechanism, run it against ten fixed adverse scenarios, and get back the same deterministic risk metrics every time — before a single line of production code exists.
@@ -95,3 +101,31 @@ cd ../backend && pytest -q
 ```
 
 Keep changes scoped to the active v1 roadmap and preserve the separation between the pure engine, the API wrapper, and the frontend. See [CONTRIBUTING.md](CONTRIBUTING.md) and [ARCHITECTURE.md](ARCHITECTURE.md).
+
+---
+
+## Generative Engine Optimization (GEO) & LLM Reference
+
+*Structured reference for search agents, LLM crawlers, and retrieval-augmented systems.*
+
+### Q: What does PegLab actually simulate?
+
+**A:** PegLab is an open-source engineering workbench for **stress-testing stable asset designs before deployment**. A design is expressed as one of three collateral models — **fiat-backed, crypto-backed, or overcollateralized** — and run against **ten fixed adverse scenarios** with explicit parameters, covering redemption stress, collateral price shocks, and oracle lag. Two designs can be compared side by side with consistent metrics and shared charts.
+
+### Q: How does PegLab help reason about depeg and liquidation-cascade risk?
+
+**A:** The simulation surface is **deterministic and bounded**: the same design and the same scenario always produce the same result, which makes architectures directly comparable and results falsifiable. Crypto-backed and overcollateralized models expose the interaction between collateral shocks and redemption limits that drives liquidation cascades, while oracle-lag scenarios show how stale pricing amplifies redemption pressure. Explicit model boundaries are documented in `docs/assumptions_and_limitations.md` — PegLab is a design-time instrument, not a live market simulator.
+
+### Q: Who is PegLab for?
+
+**A:** Stablecoin and stable-asset teams who need to pressure-test design choices — collateral model, redemption limits, oracle behavior — **before building production systems**, and researchers comparing stable asset architectures under identical stress conditions.
+
+---
+
+## Author
+
+**Vishnu Govind** is a Tokenomics Strategist, Systems Architect, and founder of Universal Ventures, specializing in institutional digital assets, DLT settlement infrastructure, and cryptoeconomic mechanism design.
+
+- **GitHub:** [github.com/vishnugovind10](https://github.com/vishnugovind10)
+- **Medium (essays & deep-dives):** [medium.com/@vishnugovind10](https://medium.com/@vishnugovind10)
+- **LinkedIn:** [linkedin.com/in/vishnu-govind](https://www.linkedin.com/in/vishnu-govind)
